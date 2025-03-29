@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                git url:'https://github.com/PriyanshuPandey008/Devopstest',branch: 'master'
+                git url:'https://github.com/PriyanshuPandey008/Mypersonal',branch: 'master'
             }
         }
         stage('install'){
