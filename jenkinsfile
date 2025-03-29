@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages{
+        stage('checkout'){
+            steps{
+                git url:'https://github.com/PriyanshuPandey008/Devopstest',branch: 'master'
+            }
+        }
+        stage('install'){
+            steps{
+                bat 'npm install'
+            }
+        }
+        stage('test'){
+            steps{
+                bat 'npm test'
+            }
+        }
+        stage('built'){
+            steps{
+                bat 'npm run build'
+            }
+        }
+    }
+}
